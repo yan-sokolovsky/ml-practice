@@ -141,7 +141,7 @@ class Adaline:
         float
             Linear output (activation is identity).
         """
-        return self.activation(self._w @ x)
+        return Adaline.activation(self._w @ x)
 
     def predict(self, x: List[float]) -> float:
         """
