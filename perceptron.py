@@ -20,7 +20,9 @@ class Perceptron:
         Seed for the random number generator used to initialise weights.
     """
 
-    def __init__(self, eta: float = 0.1, epochs: int = 10, random_state: int = 777) -> None:
+    def __init__(
+        self, eta: float = 0.1, epochs: int = 10, random_state: int = 777
+    ) -> None:
         """
         Initialise the Perceptron model.
 
@@ -95,7 +97,7 @@ class Perceptron:
         self._errors_counter += 1
         return (group - prediction) * point
 
-    def fit(self, x: List[List[float]], y: List[float]) -> 'Perceptron':
+    def fit(self, x: List[List[float]], y: List[float]) -> Perceptron:
         """
         Train the perceptron on the given data.
 
@@ -186,7 +188,7 @@ class Perceptron:
             Binary output {0, 1}.
         """
         return 0 if value <= 0 else 1
-    
+
 
 if __name__ == "__main__":
     p = Perceptron(eta=0.1, epochs=10)
