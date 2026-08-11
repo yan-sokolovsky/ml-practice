@@ -83,7 +83,7 @@ class LogisticRegression:
         errors = self._y - output
         return self._x.T.dot(errors) / self.sample_size
 
-    def fit(self, x: List[List[float]], y: List[float]) -> 'LogisticRegression':
+    def fit(self, x: List[List[float]], y: List[float]) -> LogisticRegression:
         """
         Train the model on the given dataset.
 
